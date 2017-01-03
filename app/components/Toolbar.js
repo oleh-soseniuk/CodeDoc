@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import * as mainWindowActions from '../actions/mainWindow'
-import { exportAllToHTML } from '../markdownConverter/markdownConverter'
+import { exportAllToHTML, exportToSingleHtml } from '../markdownConverter/markdownConverter'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
@@ -109,7 +109,8 @@ class Toolbar extends Component {
 	}
 
 	exportToHTML() {
-		exportAllToHTML(this.props.basePath);
+		//exportAllToHTML(this.props.basePath);
+		exportToSingleHtml(this.props.basePath);
 	}
 
 	render() {
